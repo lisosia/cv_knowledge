@@ -18,10 +18,10 @@
 # Object Detection
 
 ### Two Stage
-- faster RCNN
+- faster RCNN  
 Two-stageの始祖
 
-- cascade r-cnn
+- cascade r-cnn  
 positive sample するときの IoU 閾値が高いと、位置は正確だが recallは低くなる.
 IoUを段階的にrefineしていく branch をつけると良いとこ取りができる（branchは３つでIoU=0.5,0.6,0.7）.
 
