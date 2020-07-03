@@ -29,6 +29,14 @@ IoUを段階的にrefineしていく branch をつけると良いとこ取りが
 - SSD
 - YoloV3
 
+- YoloV4  
+paperがサーベイとして有用.  
+比較して backbone を CSPDarknet53 に + Attention + Cutmixとかでデータ拡張 + etc.
+MSCOCOへの Overfit を感じたが専門じゃないのでよくわらかない.
+
+- [YoloV5](https://github.com/ultralytics/yolov5)  
+V4と同じだが, ソースコードがpytorchになっている + pythonでいろいろ便利. ライセンスはGPLなので注意.
+
 - RetinaNet  
 focal loss を導入
 
