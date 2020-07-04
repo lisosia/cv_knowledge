@@ -19,7 +19,7 @@
 
 ### Two Stage
 - faster RCNN  
-Two-stageの始祖
+Two-stageの代表格
 
 - cascade r-cnn  
 positive sample するときの IoU 閾値が高いと、位置は正確だが recallは低くなる.
