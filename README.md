@@ -1,3 +1,7 @@
+読んだpaperはissueに書いていきます
+https://github.com/lisosia/cv_knowledge/issues
+
+
 # Tools
 - [timm](https://github.com/rwightman/pytorch-image-models)
 - [mmdetection](https://github.com/open-mmlab/mmdetection)
