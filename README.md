@@ -45,7 +45,7 @@ V4と同じだが, ソースコードがpytorchになっている + pythonでい
 focal loss を導入
 
 - CetnerNet (objects as center)  
-object center を heatmap として学習
+object center を heatmap として学習.
 DLA38やHourglass backbone.
 
 - FCOS  
@@ -56,8 +56,8 @@ Center9pixelのみをpostiveとしてtrainしたほうが性能が良いとい�
 
 - ATSS (Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection)  
 RetinanetとFCOSはFCOSの方が精度が高いとされているが, RetinanetのほうにGroupNormや GIoU loss, Centerness branch などを追加するとほぼ同じ性能になる.
-さらに、postive sapmle のとり方を工夫すると、差がなくなる. sampleのとり方をクフした場合, その場合Anchor数A=1とA=9で性能差がなくなる（工夫する前は差がある）.  
-Sampleの仕方：各FeatureごとにCenterが近いAnchorをk(=9)個選んだあとに、全体AnchorついてGtとのIoUの平均mと分散sをとりm+s以上のAnchorを選ぶ. こうすることで, １つの Feature Level だけ IoU が大きく異なる場合はそのLevelのAnchorのみをpotiveに、そうでないときは複数LevelのAnchorをpositiveにするといった挙動にできる (=adaptive).
+さらに、postive sapmle のとり方を工夫すると、差がなくなる. sampleのとり方を工夫した場合, Anchor数A=1とA=9で性能差がなくなる（工夫する前は差がある）.  
+Sampleの仕方：各Feature LevelごとにCenterが近いAnchorをk(=9)個選んだあとに、全体AnchorついてGtとのIoUの平均mと分散sをとりm+s以上のAnchorを選ぶ. こうすることで, １つの Feature Level だけ IoU が大きく異なる場合はそのLevelのAnchorのみをpotiveに、そうでないときは複数LevelのAnchorをpositiveにするといった挙動にできる (=adaptive).
 
 - EfficientDet  
-Retinenetベースで. backbone は EfficientNetに変え,入力解像度とFPSのstageとHeadのstageをスケールさせた.
+Retinenetベースで. backbone は EfficientNetに変え,入力解像度とFPNのstage数とHeadのstage数をスケールさせた.
