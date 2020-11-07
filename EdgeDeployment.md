@@ -7,28 +7,29 @@
 - Intel VPU (and Intel GPU)
 
 #### 最適化の対象
-- Latency  
+- レイテンシー (Latency)  
 入力してから最終出力を得られるまでの時間.  
 GPUの場合Batchsize=1で推論->後処理した時間のことをいう.
-- Throughput  
-Edgeの場合はLatencyのほうが重要なケースが多い (私見).  
+- スループット (Throughput)  
+１秒間に何入力処理できるか.  
+Edgeの場合はThroughputよりLatencyのほうが重要なケースが多い (私見).  
 GPUの場合, batchsizeを１以上にするとThroughputは上がるが, Latencyは下がる.
-- パラメータ数 (Parameters)  
-速度には直結しない. メモリが本当に限られている場合はパラメタ数の縮小が必要になることもある.  
-Depthwise convを使うとParamsは小さくなるが, GPU推論時のLatencyは下がる (cuDNNで最適化されていないため).  
-有名なものでは, MobilenetV2, V3 ではdepthwise conv を用いている.
+- パラメータ数 (Params)  
+モデルのパラメータ数.  
+速度には直結しない. メモリが本当に限られている場合はパラメタ数の削減が必要になることもある.  
+MobilenetV2で使われるDepthwise convは, Paramsは小さくなるが, GPU推論時のLatencyは下がる (cuDNNで最適化されていないため).  
 
 #### 最適化方法
 - モデルを小さくする  
 タスクによっては, Resnet18とResnext50の性能は変わらない.
-- Detectionなど後処理が重い場合, 推論と後処理を並列化する
+- 推論と後処理を並列化する ※Object Detectionなど, 後処理が重い場合
 - Qauntization (FP16化, INT8化)  
 post-trainingなし/あり どちらもある  
 - 枝刈り
 
 #### 最適化方法 ターゲット別 
 - GPUの場合  
-TensorRTでDeployする場合が多い. 
+TensorRTでDeployするのがデファクト.  
 FLOPSやParams と Latency は相関しないので注意.
 [GPU-Efficient Networks](https://github.com/idstcv/GPU-Efficient-Networks) のTable8, 9 が良いReference. 
 
