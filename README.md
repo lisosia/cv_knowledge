@@ -12,6 +12,7 @@ https://github.com/lisosia/cv_knowledge/issues
 - Resnext
 - SEResnext
 - EfficientNet
+- [RegNet](https://openaccess.thecvf.com/content_CVPR_2020/papers/Radosavovic_Designing_Network_Design_Spaces_CVPR_2020_paper.pdf)
 
 # Image Classification
 ### Augmentation
