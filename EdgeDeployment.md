@@ -18,12 +18,13 @@ GPUの場合, batchsizeを１以上にするとThroughputは上がるが, Latenc
 Depthwise convを使うとParamsは小さくなるが, GPU推論時のLatencyは下がる (cuDNNで最適化されていないため).  
 有名なものでは, MobilenetV2, V3 ではdepthwise conv を用いている.
 
-#### 最適化の方法
-- Qauntization (FP16化, INT8化)  
-post-trainingなし/あり どちらもある
+#### 最適化方法
 - モデルを小さくする  
 タスクによっては, Resnet18とResnext50の性能は変わらない.
 - Detectionなど後処理が重い場合, 推論と後処理を並列化する
+- Qauntization (FP16化, INT8化)  
+post-trainingなし/あり どちらもある  
+- 枝刈り
 
 #### 最適化方法 ターゲット別 
 - GPUの場合  
@@ -44,7 +45,8 @@ DeploymentにOpenVINOを使える. VPUはFP16に対応(INT8は対応していな
 
 ## Reference
 - [GPU-Efficient Networks](https://github.com/idstcv/GPU-Efficient-Networks)  
-GPUで早くなるようにNetを組んだ
+GPUで早くなるようにNetをDesignしてArchitectureSearchした. 前半はXX-Block(Resnet18,34で使われているもの), 後半は DepthWise, BL(Mobilenet) だと Performance/Latency効率が良い.
+NAS全般に言えることだが, Imagenet以外へ適用しても, その効率性は保たれるのだろうか. 保たれないのなら, 少し大きいNetでTrain->枝刈り などが必要になってくるのかもしれない.
 - [Once-For-All](https://github.com/mit-han-lab/once-for-all)  
 一度のTrainで様々なサイズのモデルを生成できる.  大きなNetからスタートして, progressiveに小さなモデルへShrinkしていく(PS: Progressive Shrink)
 [qiita記事](https://qiita.com/takoroy/items/275af2b44a68fc4bb356)
