@@ -41,6 +41,10 @@ MSCOCOへの Overfit を感じたが専門じゃないのでよくわらかな�
 - [YoloV5](https://github.com/ultralytics/yolov5)  
 V4と同じだが, ソースコードがpytorchになっている + pythonでいろいろ便利. ライセンスはGPLなので注意.
 
+- PP-Yolo  
+backbornをresnet50-dcnに変更+色々いれる. yolo4より良いと主張.
+[qiita記事](https://qiita.com/takoroy/items/275af2b44a68fc4bb356)
+
 - RetinaNet  
 focal loss を導入
 
