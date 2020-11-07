@@ -11,7 +11,7 @@
 入力してから最終出力を得られるまでの時間.  
 GPUの場合Batchsize=1で推論->後処理した時間のことをいう.
 - Throughput  
-Edgeの場合はLatencyのほうが重視される傾向にある.  
+Edgeの場合はLatencyのほうが重要なケースが多い (私見).  
 GPUの場合, batchsizeを１以上にするとThroughputは上がるが, Latencyは下がる.
 - パラメータ数 (Parameters)  
 速度には直結しない. メモリが本当に限られている場合はパラメタ数の縮小が必要になることもある.  
