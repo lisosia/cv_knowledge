@@ -40,7 +40,8 @@ paperがサーベイとして有用.
 MSCOCOへの Overfit を感じたが専門じゃないのでよくわらかない.
 
 - [YoloV5](https://github.com/ultralytics/yolov5)  
-V4と同じだが, ソースコードがpytorchになっている + pythonでいろいろ便利. ライセンスはGPLなので注意.
+V4と同じだが, ソースコードがpytorchになっている + pythonでいろいろ便利. ライセンスはGPLなので注意.  
+よいまとめ https://www.kaggle.com/c/global-wheat-detection/discussion/172436
 
 - PP-Yolo  
 backbornをresnet50-dcnに変更+色々いれる. yolo4より良いと主張.
