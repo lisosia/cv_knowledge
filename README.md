@@ -1,6 +1,8 @@
 arXivTimesにならって、読んだpaperはissueに書いていきます。正確性より量を重視します。
 https://github.com/lisosia/cv_knowledge/issues
 
+wiki(メモ置き場)  
+https://github.com/lisosia/cv_knowledge/wiki
 
 # Tools
 - [timm](https://github.com/rwightman/pytorch-image-models)
