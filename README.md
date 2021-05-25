@@ -56,6 +56,11 @@ focal loss を導入
 object center を heatmap として学習.
 DLA38やHourglass backbone.
 
+- RepPoints  
+マルチFeature版CenterNet + N=9個の点(==grid中央からのoffset)を推論.  
+BoxはN個のPointの平均/標準偏差をbox中心/サイズとして推論  
+https://qiita.com/takoroy/items/6f4f2a5ffabc20479b66
+
 - FCOS  
 CenterNetに centernessを導入.
 FPNをくっつけた.
