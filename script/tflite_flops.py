@@ -4,7 +4,7 @@
 depends on https://pypi.org/project/tflite/
 
 reference code
-using https://github.com/jackwish/tflite/blob/master/tests/test_mobilenet.py
+https://github.com/jackwish/tflite/blob/master/tests/test_mobilenet.py
 """
 
 import sys
@@ -12,7 +12,7 @@ import sys
 import tflite
 
 
-def calc_flops(path)
+def calc_flops(path):
   with open(path, 'rb') as f:
     buf = f.read()
     model = tflite.Model.GetRootAsModel(buf, 0)
