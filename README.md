@@ -99,5 +99,5 @@ SwinやConvNextの論文で、セマンティックセグメンテーション�
 UPerNet+Swinで実験を行っている。DeepLabV3より高精度（Table 3）。
 
 - [ConvNext](https://arxiv.org/abs/2201.03545), 2022  
-UPerNet+Swinで実験を行っている。  
+UPerNet+ConvNextで実験を行っている。  
 Swinと同程度以上の精度/速度トレードオフを主張（セマンティックセグメンテーションタスクについてはFPS記載はない。Table 4。）
