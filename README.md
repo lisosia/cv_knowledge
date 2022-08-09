@@ -92,7 +92,7 @@ PPM (Pyramid Pooling Module) を導入。
 
 - [UPerNet](https://arxiv.org/abs/1807.10221v1), ECCV 2018  
 "Unified Perceptual Parsing for Scene Understanding" の略  
-PSPNetにFPNを加えて、さらにOptoinalな分類ヘッドや第２第３のセグメンテーションヘッドをつけた形
+PSPNetにFPNを加えて、さらにOptoinalな分類ヘッドや第２第３のセグメンテーションヘッドをつけた形。  
 SwinやConvNextの論文で、セマンティックセグメンテーションタスクの構造として採用されている（対象タスクはADE20Kデータセット）  
 
 - Swin Transformer, ICCV 2021  
