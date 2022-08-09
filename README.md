@@ -95,9 +95,9 @@ PPM (Pyramid Pooling Module) を導入。
 PSPNetにFPNを加えて、さらにOptoinalな分類ヘッドや第２第３のセグメンテーションヘッドをつけた形。  
 SwinやConvNextの論文で、セマンティックセグメンテーションタスクの構造として採用されている（対象タスクはADE20Kデータセット）  
 
-- Swin Transformer, ICCV 2021  
+- [Swin Transformer](https://arxiv.org/abs/2103.14030), ICCV 2021  
 UPerNet+Swinで実験を行っている。DeepLabV3より高精度（Table 3）。
 
-- [ConvNext](https://arxiv.org/abs/2201.03545), 2022
+- [ConvNext](https://arxiv.org/abs/2201.03545), 2022  
 UPerNet+Swinで実験を行っている。  
 Swinと同程度以上の精度/速度トレードオフを主張（セマンティックセグメンテーションタスクについてはFPS記載はない。Table 4。）
