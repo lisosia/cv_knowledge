@@ -15,6 +15,8 @@ https://github.com/lisosia/cv_knowledge/wiki
 - SEResnext
 - EfficientNet
 - [RegNet](https://openaccess.thecvf.com/content_CVPR_2020/papers/Radosavovic_Designing_Network_Design_Spaces_CVPR_2020_paper.pdf)
+- [Swin](https://arxiv.org/abs/2103.14030)
+- [ConvNeXt](https://arxiv.org/abs/2201.03545)
 
 # Image Classification
 ### Augmentation
@@ -74,3 +76,28 @@ Sampleの仕方：各Feature LevelごとにCenterが近いAnchorをk(=9)個選�
 
 - EfficientDet  
 Retinenetベースで. backbone は EfficientNetに変え,入力解像度とFPNのstage数とHeadのstage数をスケールさせた.
+
+# Semantic Segmentation
+
+- U-Net, 2015  
+基本となったモデル
+
+- [DeepLabV3](https://arxiv.org/pdf/1802.02611.pdf), 2018  
+DeepLabは昔から有名。詳細知らず。
+
+- PSPNet (Pyramid Scene Parsing Network), 2017  
+PPM (Pyramid Pooling Module) を導入。  
+バックボーンの最終層で、1x1,2x2,3x3,6x6サイズにPooling後、それぞれ 1x1-Convして元のサイズにリサイズして元の層にConcat。  
+かなり効いていそう（mIoU +4~）
+
+- [UPerNet](https://arxiv.org/abs/1807.10221v1), ECCV 2018  
+"Unified Perceptual Parsing for Scene Understanding" の略  
+PSPNetにFPNを加えて、さらにOptoinalな分類ヘッドや第２第３のセグメンテーションヘッドをつけた形
+SwinやConvNextの論文で、セマンティックセグメンテーションタスクの構造として採用されている（対象タスクはADE20Kデータセット）  
+
+- Swin Transformer, ICCV 2021  
+UPerNet+Swinで実験を行っている。DeepLabV3より高精度（Table 3）。
+
+- [ConvNext](https://arxiv.org/abs/2201.03545), 2022
+UPerNet+Swinで実験を行っている。  
+Swinと同程度以上の精度/速度トレードオフを主張（セマンティックセグメンテーションタスクについてはFPS記載はない。Table 4。）
