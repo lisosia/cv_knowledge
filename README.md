@@ -7,6 +7,7 @@ https://github.com/lisosia/cv_knowledge/wiki
 # Tools
 - [timm](https://github.com/rwightman/pytorch-image-models)
 - [mmdetection](https://github.com/open-mmlab/mmdetection)
+- [mmsegmentation](https://github.com/open-mmlab/mmsegmentation)
 - [segementation_models.pytorch](https://github.com/qubvel/segmentation_models.pytorch)
 
 # Backbone
