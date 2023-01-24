@@ -107,3 +107,5 @@ Swinと同程度以上の精度/速度トレードオフを主張（セマンテ
 
 - [VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training](https://arxiv.org/abs/2203.12602), 2022  
 Video（HWT）をマスクして復元するタスクでPretrain。tube masking（TransformerのPatchが16x16だとして HWT=16x16x2などでマスク）する。マスク率は95%。動画認識タスクで有効。
+
+- [ConvMAE: Masked Convolution Meets Masked Autoencoders](https://arxiv.org/abs/2205.03892), 2022  
