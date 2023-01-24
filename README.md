@@ -105,5 +105,5 @@ Swinと同程度以上の精度/速度トレードオフを主張（セマンテ
 - [Masked autoencoders are scalable vision learners](https://arxiv.org/abs/2203.12602), 2021  
 画像をマスクして復元するタスクでPretrain。Patchの一部のみEncoderに入寮し、Encoder後にMask Token挿入し、その後小さなDecoderで復元。Pretrain学習後、Decoderは捨ててEncoderのみ用いる。マスク率は75%。
 
-- [VideoMAE](https://arxiv.org/abs/2203.12602), 2022  
+- [VideoMAE: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training](https://arxiv.org/abs/2203.12602), 2022  
 Video（HWT）をマスクして復元するタスクでPretrain。tube masking（TransformerのPatchが16x16だとして HWT=16x16x2などでマスク）する。マスク率は95%。動画認識タスクで有効。
