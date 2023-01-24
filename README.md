@@ -99,3 +99,11 @@ UPerNet+Swinで実験を行っている。DeepLabV3より高精度（Table 3）�
 - [ConvNext](https://arxiv.org/abs/2201.03545), 2022  
 UPerNet+ConvNextで実験を行っている。  
 Swinと同程度以上の精度/速度トレードオフを主張（セマンティックセグメンテーションタスクについてはFPS記載はない。Table 4。）
+
+# Self-Supervised Learning (SSL)
+
+- [Masked autoencoders are scalable vision learners](https://arxiv.org/abs/2203.12602), 2021  
+画像をマスクして復元するタスクでPretrain。Patchの一部のみEncoderに入寮し、Encoder後にMask Token挿入し、その後小さなDecoderで復元。Pretrain学習後、Decoderは捨ててEncoderのみ用いる。マスク率は75%。
+
+- [VideoMAE](https://arxiv.org/abs/2203.12602), 2022  
+Video（HWT）をマスクして復元するタスクでPretrain。tube masking（TransformerのPatchが16x16だとして HWT=16x16x2などでマスク）する。マスク率は95%。動画認識タスクで有効。
